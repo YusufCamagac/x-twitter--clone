@@ -4,27 +4,24 @@ import Menu from "./Menu";
 
 const SideBar = () => {
   return (
-    <div className="w-[275px] min-h-screen px-2 ">
+    <div className="w-[275px]  min-h-screen px-2 flex flex-col overflow-auto ">
       <div className="py-0.5">
         <Link
           to="/"
           className="w-[55px] h-[55px] rounded-full flex items-center justify-center hover:bg-[#eff3f41a] transition-colors"
         >
-          {/* <img
-            height={42.5}
-            width={42.5}
-            src="/public/images/twitter.svg"
-            alt="twitter"
-          /> */}
-          <svg viewBox="0 0 24 24">
+          <svg viewBox="0 0 24 24 " width={30} height={30}>
             <path
-              path="#fff"
+              fill="#fff"
               d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
             />
           </svg>
         </Link>
       </div>
       <Menu />
+      <div className="mt-auto">
+        <div className="my-3">text</div>
+      </div>
     </div>
   );
 };

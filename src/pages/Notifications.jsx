@@ -1,7 +1,8 @@
 import React from "react";
+import MainLayout from "../layouts/MainLayout";
 
 const Notifications = () => {
-  return <div>Notifications</div>;
+  return <MainLayout>Notifications</MainLayout>;
 };
 
 export default Notifications;
