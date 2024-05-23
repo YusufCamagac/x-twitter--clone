@@ -4,12 +4,19 @@ import classNames from "classnames";
 import { mainMenu } from "../../utils/const";
 import Button from "../../components/Button";
 import More from "./More";
+import { store } from "../../redux/store";
+import { useSelector } from "react-redux";
 
 const Menu = () => {
+  const account = useSelector((state) => state.auth.currentAccount);
   return (
-    <nav className="mt-0.5 mb-1">
+    <nav className="mt-0.5 mb-1" key={account.id}>
       {mainMenu.map((menu, index) => (
-        <NavLink to={menu.path} className="py-1 block group">
+        <NavLink
+          key={index}
+          to={typeof menu.path === "function" ? menu.path() : menu.path}
+          className="py-1 block group"
+        >
           {({ isActive }) => (
             <div
               className={classNames(

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
+import Account from "./Account";
 
 const SideBar = () => {
   return (
-    <div className="w-[275px]  min-h-screen px-2 flex flex-col overflow-auto ">
+    <div className="w-[275px]  min-h-screen px-2 flex flex-col  ">
       <div className="py-0.5">
         <Link
           to="/"
@@ -19,9 +20,8 @@ const SideBar = () => {
         </Link>
       </div>
       <Menu />
-      <div className="mt-auto">
-        <div className="my-3">text</div>
-      </div>
+
+      <Account />
     </div>
   );
 };

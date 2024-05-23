@@ -1,3 +1,5 @@
+import { store } from "../redux/store";
+
 export const mainMenu = [
   {
     path: "/",
@@ -120,8 +122,8 @@ export const mainMenu = [
     },
   },
   {
-    path: "/placeMarks",
-    title: "Yer İşaretleri",
+    path: "/lists",
+    title: "Listeler",
     icon: {
       active: (
         <svg viewBox="0 0 24 24" width={26.25} height={26.25} className="block">
@@ -142,7 +144,7 @@ export const mainMenu = [
     },
   },
   {
-    path: "/placeMarks",
+    path: "/booksmarks",
     title: "Yer İşaretleri",
     icon: {
       active: (
@@ -208,7 +210,9 @@ export const mainMenu = [
     },
   },
   {
-    path: "/profile",
+    path: () => {
+      return `/${store.getState()?.auth?.currentAccount?.username}`;
+    },
     title: "Profil",
     icon: {
       active: (
