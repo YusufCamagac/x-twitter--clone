@@ -5,7 +5,7 @@ import Account from "./Account";
 
 const SideBar = () => {
   return (
-    <div className="w-[275px]  min-h-screen px-2 flex flex-col  ">
+    <div className="w-[275px]  min-h-screen px-2 flex flex-col sticky top-0 ">
       <div className="py-0.5">
         <Link
           to="/"
